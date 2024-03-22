@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Shop - Tech Accessories</title>
+</head>
+<style>
+       * {
+    margin: 0;
+}
+
+main { margin-bottom: 20px;}
+
+.header {
+    width: 1500px;
+    display:block;
+    background-color: #000;
+    height: 80px;
+    position: fixed;
+    top: 0
+}
+
+.header-items {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 20px;
+    padding-top: 18px;
+}
+
+.neon{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 780px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 2px;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-slow{
+    transform: translate(-50%, -50%);
+    color: white /* #02c3f3;*/;
+    animation: flicker 3s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-fast{
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: flicker 1s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  @keyframes flicker {
+      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+          text-shadow: none;
+      opacity: .99;
+          
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+          opacity: 0.4;
+      }
+  }
+  
+.marvel-logo { width: 100px; margin-left: 50px; }
+
+/* =========== SIDEBAR =========== */
+.sidebar-container {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 85px;
+    height: 600px;
+    width: 300px;
+}
+
+.clothing-items, .accesory-items, .tc-items {
+    margin-left: 30px;
+    margin-top: 9px;
+
+}
+
+.clothing-items:hover, .accesory-items:hover, .tc-items:hover {
+    text-decoration: underline;
+    transform: 0.3s;
+}
+
+.all-items {
+    margin-top: 50px;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 5px 4px;
+    color:  #000
+}
+
+li:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+h4 {
+    font-family:monospace;
+    color: #000
+}
+
+/* ============ MAIN SHOP ITEMS ============ */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 22px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.item-1 {
+    display: inline-block;
+    border-radius: 12px;
+    border:#000 solid 1px;
+    margin: 0 auto;
+    width: 200px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 10px 9px;
+}
+.item-img {
+    width: 150px;
+}
+
+.item-name, .price {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.price { color: green}
+
+button {
+    background-color: #fff;
+    color: rgb(201, 7, 7);
+    border: solid 1px;
+    border-color: rgb(194, 1, 1);
+    border-radius: 23px;
+    padding: 10px 10px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: rgb(53, 175, 53);
+    border-color: rgb(53, 175, 53);
+    padding: 10px 10px;
+}
+</style>
+<body>
+    <main>
+        <div class="header">
+            <div class="header-items">
+                <img class="marvel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png">
+                <h1 class="neon" data-text="U">ADD ITEMS TO YOUR COLLECTION WITH <span class="flicker-slow">AMAZING </span><span class="flicker-fast">DEALS</span></h1>
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart--v1.png"/>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="all-items">
+                <h4 style="margin-left: 30px; margin-top: 9px;">ALL</h4>
+            </div>
+            <div class="clothing-items">
+                <h4>CLOTHING</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tshirt.html">T-shirts</a></li><br>
+                    <li>Jackets/Sweater</li><br>
+                    <li>Costumes</li>
+                </ol>
+            </div>
+            <div class="accesory-items">
+                <h4 style="text-decoration:underline;">ACCESSORIES</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-bags.html">Bags/Backpacks</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-kc.html">Keychains</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-ht.html">Hats/Thumblers</a></li><br>
+                    <li style="background-color:rgba(128, 128, 128, 0.39); border-radius: 5px;">Tech Accessories</li>
+                </ol>
+            </div>
+            <div class="tc-items">
+                <h4>TOYS AND COLLECTIBLES</h4>
+                <ol> 
+                    <li><a style="text-decoration: none; color:#000" href="shop-af.html">Action Figures</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-funko.html">Funko Pop</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-lego.html">Lego</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/b9/e9/b2/b9e9b20c772360fa4d357d9c38bcebf7.jpg">
+                <h5 class="item-name">Ant-Man & The Wasp Particle Discs Official Pins</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width: 120px" class="item-img" src="https://i.pinimg.com/564x/a2/49/5a/a2495a40d9d51cc634a6849fb917a9b4.jpg">
+                <h5 class="item-name">Gamers Assemble|Captain America Gaming Chair</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/ee/3f/e3/ee3fe394c564fcf2978d12d6d7d66596.jpg">
+                <h5 class="item-name">Marvel Infinity Gauntlet Airpods Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/4d/0c/49/4d0c496a5820a2abf91c6156b550736e.jpg">
+                <h5 class="item-name">Iron Man Gaming Mouse</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/69/a4/62/69a46278bbab038740b2e777bf028e2c.jpg">
+                <h5 class="item-name">Iron Man Gaming Keyboard Hardware</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/c6/a7/a4/c6a7a4dd601cf8f112f74632e88f250b.jpg">
+                <h5 class="item-name">Marvel Agents of S.H.I.E.L.D 16GB USB Flash Drive</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/b6/1e/5d/b61e5d4aa6361e58ea06cbe9f0e25220.jpg">
+                <h5 class="item-name">Avengers Logo PopSocket</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/72/00/96/7200963c700be6fb563d3a80469d88aa.jpg">
+                <h5 class="item-name">Captain America Civil War Bluetooth Headphones</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/d2/d8/79/d2d87919d8cbd7fbe396d4c02b051a61.jpg">
+                <h5 class="item-name">Iphone X Spider Man Phone Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/5c/73/a4/5c73a4fb9cd7f263a4dd4b86eb49664d.jpg">
+                <h5 class="item-name">The Incredible Avenger Hulk Gaming Chair</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/e5/1b/8c/e51b8c1968d648befde491d4dc3aa0a4.jpg">
+                <h5 class="item-name">Black Panther Iphone XR Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/8b/43/5d/8b435d05273e3503f214ca274360e7da.jpg">
+                <h5 class="item-name">Black Widow Headphones</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/32/51/6f/32516f5b6dcaf77805449d2de5e7784b.jpg">
+                <h5 class="item-name">Loki Iphone 11 Snap Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/34/a0/3b/34a03b63a3dda9ab3b59aaf83fe84bf0.jpg">
+                <h5 class="item-name">Marvel Character 3D Spider-Man| Airpods Pro Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/39/78/e2/3978e2139b2c71a5f6a9e72aaf89cd06.jpg">
+                <h5 class="item-name">Marvel Character 3D Black Panther| Airpods Pro Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/ce/91/e1/ce91e18eafe49e42b83050e0557855e5.jpg">
+                <h5 class="item-name">Marvel Character 3D Captain America| Airpods Pro Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/6c/f1/40/6cf1400a61f3fb85b6f210be2d1802f6.jpg">
+                <h5 class="item-name">Deadpool Iphone 5 Case</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/a2/d7/9b/a2d79b5bd90c50508cb1db2e8194fa6a.jpg">
+                <h5 class="item-name">Avengers Glitch Popsocket</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/1c/d0/fd/1cd0fd3a92f94084848cea6ca4e07506.jpg">
+                <h5 class="item-name">Officially Licensed Spider Helmet</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/f9/60/98/f96098acbc092fcbf6beb75cceeaa70f.jpg">
+                <h5 class="item-name">Marvel Captain America Gaming Earbuds</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/6b/a0/1a/6ba01ab6dfc8714c6cca73d48acff3be.jpg">
+                <h5 class="item-name">Thor Changing Case Earphones</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            
+            
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Movies</title>
+    <link rel="stylesheet" href="movies.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="right-div-fixed">
+        <h1>WATCH YOUR PICK!</h1>
+        <img class="mcu-img" src="https://static.wikia.nocookie.net/disney/images/6/69/Marvel_Cinematic_Universe_Logo.png/revision/latest?cb=20160729172402">
+        <button style="--clr:#FF0000" class="u-in">
+            <p>might looking for these: </p>
+            <input list="movies" name="movie" id="movie">
+            <datalist id="movies">
+                <option value="All"></option>
+                <option value="Iron Man"></option>
+                <option value="Captain America"></option>
+                <option value="Hulk"></option>
+                <option value="Spiderman"></option>
+                <option value="Thor"></option>
+                <option value="Doctor Strange"></option>
+                <option value="Spiderman"></option>
+            </datalist>
+        </button>
+        <div class="disney-div">
+            <p style="font-size: 20px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">STREAM NOW ON</p>
+            <img class="disney-img" src="https://seeklogo.com/images/D/disney-logo-9649A88458-seeklogo.com.png">
+        </div>
+        <a href="https://www.apps.disneyplus.com/ph/pre_launch" target="_blank"><button style="--clr:#0000FF" class="disney-btn">GET SUBSCRIPTION</button></a>
+    </div> 
+    <div class="movie-grid">
+        <div class="m">
+            <img class="p" src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0%2C0%2C540%2C810">
+            <a href="https://bflix.gg/movie/watch-avengers-endgame-19722" target="_blank">Avengers: Endgame</a>
+            <p class="duration">Duration: 181 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://i.ytimg.com/vi/QoTbGtV9Zpk/movieposter.jpg">
+            <a href="https://bflix.gg/movie/watch-black-panther-19797" target="_blank">Black Panther</a>
+            <p class="duration">Duration: 134 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://amc-theatres-res.cloudinary.com/v1608340612/amc-cdn/production/2/movies/45800/45838/Poster/p_800x1200_AMC_CAPTAINMARVEL_110320.jpg">
+            <a href="https://bflix.gg/movie/watch-captain-marvel-19635" target="_blank">Captain Marvel</a>
+            <p class="duration">Duration: 124 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://cdn.flickeringmyth.com/wp-content/uploads/2020/03/Black-Widow-promo-posters-5.jpg">
+            <a href="https://bflix.gg/movie/watch-black-widow-66666" target="_blank">Black Widow</a>
+            <p class="duration">Duration: 134 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://i.pinimg.com/564x/9f/56/a3/9f56a3f2bd0b50182739fd11587a600c.jpg">
+            <a href="https://bflix.gg/movie/watch-spider-man-no-way-home-71326" target="_blank">Spider-Man: No Way Home</a>
+            <p class="duration">Duration: 148 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://image.tmdb.org/t/p/original/y4MBh0EjBlMuOzv9axM4qJlmhzz.jpg">
+            <a href="https://bflix.gg/movie/watch-guardians-of-the-galaxy-vol-2-19735" target="_blank">Guardians of the Galaxy Vol.2</a>
+            <p class="duration">Duration: 137 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://m.media-amazon.com/images/M/MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg">
+            <a href="https://bflix.gg/movie/watch-thor-love-and-thunder-66670" target="_blank">Thor: Love and Thunder</a>
+            <p class="duration">Duration: 150 min </p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/fb1ede65688027.5afcac81af5e6.jpg">
+            <a href="https://bflix.gg/movie/watch-avengers-infinity-war-19851" target="_blank">Avengers: Infinity War</a>
+            <p class="duration">Duration: 149 min </p>
+        </div>
+        <div class="m-hulk">
+            <img class="p-hulk" src="https://i.pinimg.com/564x/0b/a8/69/0ba869ba8418d436d02d6fef1746bf9f.jpg">
+            <a class="a-hulk" href="https://bflix.gg/tv/watch-the-incredible-hulk-38845" target="_blank">The Incredible Hulk</a>
+            <p class="duration">Duration: 60 min </p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/788cf621-29e7-4712-bc47-7fb196445147/d9ofd43-ea0d2912-4b7b-482f-803b-21a856484092.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzc4OGNmNjIxLTI5ZTctNDcxMi1iYzQ3LTdmYjE5NjQ0NTE0N1wvZDlvZmQ0My1lYTBkMjkxMi00YjdiLTQ4MmYtODAzYi0yMWE4NTY0ODQwOTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RwQhUeZQKoZdNQhmvmQWyjpRHdbKfkOTxeo8YRCLfV8">
+            <a href="https://bflix.gg/movie/watch-deadpool-19694" target="_blank">Deadpool</a>
+            <p class="duration">Duration: 108 min </p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://m.media-amazon.com/images/M/MV5BN2I2Yzc2OWMtMWQzYi00ZDcxLTgyOTMtNjBiNzA5Y2QxZDYxXkEyXkFqcGdeQXVyMTM0NTc2NDgw._V1_.jpg">
+            <a href="https://bflix.gg/movie/watch-venom-let-there-be-carnage-66669" target="_blank">Venom Let There Be Carnage</a>
+            <p class="duration">Duration: 181 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://allears.net/wp-content/uploads/2020/09/captain-america-poster-scaled.jpg">
+            <a href="" target="_blank">Captain America</a>
+            <p class="duration">Duration: 149 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://lumiere-a.akamaihd.net/v1/images/dtst_ph_2_e3a974ec.jpeg">
+            <a href="https://bflix.gg/movie/watch-doctor-strange-in-the-multiverse-of-madness-66671" target="_blank">Doctor Strange in the Multiverse of Madness</a>
+            <p class="duration">Duration: 180 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://preview.redd.it/d0azr7i84i671.jpg?auto=webp&s=65867619d9f38517b13f978003cf5621210b8f79">
+            <a href="https://bflix.gg/movie/watch-ghost-rider-spirit-of-vengeance-18939" target="_blank">Ghost Rider: Spirit of Venageance</a>
+            <p class="duration">Duration: 95 min</p>
+        </div>
+        <div class="m-im">
+            <img class="p" src="https://images.moviesanywhere.com/9e6a7d319487c4ef58543298ffdc2fb9/9cac9d6f-a5f5-4e3b-91b5-8ad8d538fbb4.jpg">
+            <a href="https://bflix.gg/movie/watch-iron-man-3-19562" target="_blank">Iron Man 3</a>
+            <p class="duration">Duration: 131 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://www.joblo.com/wp-content/uploads/2017/06/Spider-Man-Homecoming-poster-6-large-1.jpg">
+            <a href="https://bflix.gg/movie/watch-spiderman-homecoming-19743" target="_blank">Spider-Man: Homecoming</a>
+            <p class="duration">Duration: 133 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://lumiere-a.akamaihd.net/v1/images/p_antman_19916_2502181d.jpeg">
+            <a href="https://bflix.gg/movie/watch-antman-19744" target="_blank">Antman</a>
+            <p class="duration">Duration: 117 min</p>
+        </div>
+        <div class="m-x">
+            <img class="p" src="https://i.pinimg.com/originals/0f/7f/1b/0f7f1bc9cd4c58a345662cce310cbfab.jpg">
+            <a href="https://bflix.gg/search/x-men" target="_blank">X-Men</a>
+            <p class="duration">Duration: 104 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://preview.redd.it/98400kqjnpd11.png?auto=webp&s=47194fa8a201577fe44705b0f1c473a4a7cab74c">
+            <a href="https://bflix.gg/movie/watch-daredevil-18528" target="_blank">Daredevil</a>
+            <p class="duration">Duration: 103 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://lumiere-a.akamaihd.net/v1/images/p_captianamericacivilwar_19888_074030bd.jpeg?region=0%2C0%2C540%2C810">
+            <a href="https://bflix.gg/movie/watch-captain-america-civil-war-19712" target="_blank">Captain America: Civil War</a>
+            <p class="duration">Duration: 147 min</p>
+        </div>
+        <div class="m">
+            <img class="p" src="https://i.pinimg.com/736x/c8/38/d6/c838d6b778c96c8604148d1ec1386c61.jpg">
+            <a href="https://bflix.gg/movie/watch-blade-18932" target="_blank">Blade</a>
+            <p class="duration">Duration: 120 min</p>
+        </div>
+        <div class="m-avengers">
+            <img class="p" src="https://image.tmdb.org/t/p/original/n3G6dLQPDDdKvUKWMlCI7LRH9TQ.jpg">
+            <a href="https://bflix.gg/movie/watch-the-avengers-19782" target="_blank">The Avengers</a>
+            <p class="duration">Duration: 143 min</p>
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
+<!-- -->

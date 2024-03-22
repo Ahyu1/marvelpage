@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Shop - Hats/Thumblers</title>
+</head>
+<style>
+    * {
+    margin: 0;
+}
+
+main { margin-bottom: 20px;}
+
+.header {
+    width: 1500px;
+    display:block;
+    background-color: #000;
+    height: 80px;
+    position: fixed;
+    top: 0
+}
+
+.header-items {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 20px;
+    padding-top: 18px;
+}
+
+.neon{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 780px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 2px;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-slow{
+    transform: translate(-50%, -50%);
+    color: white /* #02c3f3;*/;
+    animation: flicker 3s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-fast{
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: flicker 1s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  @keyframes flicker {
+      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+          text-shadow: none;
+      opacity: .99;
+          
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+          opacity: 0.4;
+      }
+  }
+  
+.marvel-logo { width: 100px; margin-left: 50px; }
+
+/* =========== SIDEBAR =========== */
+.sidebar-container {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 85px;
+    height: 600px;
+    width: 300px;
+}
+
+.clothing-items, .accesory-items, .tc-items {
+    margin-left: 30px;
+    margin-top: 9px;
+
+}
+
+.clothing-items:hover, .accesory-items:hover, .tc-items:hover {
+    text-decoration: underline;
+    transform: 0.3s;
+}
+
+.all-items {
+    margin-top: 50px;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 5px 4px;
+    color:  #000
+}
+
+li:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+h4 {
+    font-family:monospace;
+    color: #000
+}
+
+/* ============ MAIN SHOP ITEMS ============ */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 22px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.item-1 {
+    display: inline-block;
+    border-radius: 12px;
+    border:#000 solid 1px;
+    margin: 0 auto;
+    width: 200px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 10px 9px;
+}
+.item-img {
+    width: 150px;
+}
+
+.item-name, .price {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.price { color: green}
+
+button {
+    background-color: #fff;
+    color: rgb(201, 7, 7);
+    border: solid 1px;
+    border-color: rgb(194, 1, 1);
+    border-radius: 23px;
+    padding: 10px 10px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: rgb(53, 175, 53);
+    border-color: rgb(53, 175, 53);
+    padding: 10px 10px;
+}
+</style>
+<body>
+    <main>
+        <div class="header">
+            <div class="header-items">
+                <img class="marvel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png">
+                <h1 class="neon" data-text="U">ADD ITEMS TO YOUR COLLECTION WITH <span class="flicker-slow">AMAZING </span><span class="flicker-fast">DEALS</span></h1>
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart--v1.png"/>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="all-items">
+                <h4 style="margin-left: 30px; margin-top: 9px;">ALL</h4>
+            </div>
+            <div class="clothing-items">
+                <h4>CLOTHING</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tshirt.html">T-shirts</a></li><br>
+                    <li>Jackets/Sweater</li><br>
+                    <li>Costumes</li>
+                </ol>
+            </div>
+            <div class="accesory-items">
+                <h4 style="text-decoration:underline;">ACCESSORIES</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-bags.html">Bags/Backpacks</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-kc.html">Keychains</a></li><br>
+                    <li style="background-color:rgba(128, 128, 128, 0.39); border-radius: 5px;">Hats/Thumblers</li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tech.html">Tech Accessories</a></li>
+                </ol>
+            </div>
+            <div class="tc-items">
+                <h4>TOYS AND COLLECTIBLES</h4>
+                <ol> 
+                    <li><a style="text-decoration: none; color:#000" href="shop-af.html">Action Figures</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-funko.html">Funko Pop</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-lego.html">Lego</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/d7/f4/02/d7f402fa125a81d3357489a176d5ec09.jpg">
+                <h5 class="item-name">Marvel Avengers Endgame Cap</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/26/d5/f0/26d5f0a87997e86d47a1ab5efe3d5a0c.jpg">
+                <h5 class="item-name">Marvel Agent of S.H.I.E.L.D Official Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/52/58/60/525860cc2e0e0bedbbaa6952142c30ab.jpg">
+                <h5 class="item-name">Avengers Logo Winter Beanie Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/d8/e4/a5/d8e4a58bd03d71d076b18b6bc088f540.jpg">
+                <h5 class="item-name">Spider-Man Big Eye Shape Flat Baseball Cap</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/d6/77/10/d6771054b398cd886a098ff854b78ac1.jpg">
+                <h5 class="item-name">Hulk Cotton Snapback Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/66/4b/f7/664bf7541e56bd38a1edf0a6e74396be.jpg">
+                <h5 class="item-name">Iron Man Cotton Snapback Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/1e/b3/5b/1eb35bb6379a3132b54f09b9e0065aec.jpg">
+                <h5 class="item-name">Captain America Bonnet</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/d3/65/38/d36538a5308de1c582fc1b6931e407e3.jpg">
+                <h5 class="item-name">Venom Logo Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/cb/3b/0d/cb3b0d9b55a1b559b0348ba2a3b35f2a.jpg">
+                <h5 class="item-name">Captain America "Team Cap" Snapback Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/ba/7c/5b/ba7c5b0abb912f7e4370295cc03d62c7.jpg">
+                <h5 class="item-name">Spider Head Logo Baseball Cap</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/8a/ed/3b/8aed3b422f557d185d53ff55f8386d04.jpg">
+                <h5 class="item-name">Official Iron Man Read Winter Beanie Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width:100px;" class="item-img" src="https://i.pinimg.com/564x/e7/e0/2c/e7e02ca36469d159c46cdf38691b0c62.jpg">
+                <h5 class="item-name">Loki Costplay Snapback Hat</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/94/a5/01/94a5018d7f22636423dead4fa5108d46.jpg">
+                <h5 class="item-name">Marvel: Spider-Man Metal Travel Mug</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/8c/96/f7/8c96f779fda18e111dddbafe85a7c2a9.jpg">
+                <h5 class="item-name">Dual Spider-Man and Venom Face Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/af/e1/2c/afe12c6d4d84b1df1085918cea0c983b.jpg">
+                <h5 class="item-name">Marvel Hero Snowball Fight Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/89/67/88/896788e261c1b11a7cdca384c7432654.jpg">
+                <h5 class="item-name">Hulk Retro Arms Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/9c/57/0d/9c570d63c5b3c4159ebd00f042a9ae9c.jpg">
+                <h5 class="item-name">Thor Retro Comic Graphics Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/1f/a1/cb/1fa1cbaf637bbc36aa43ad7675c3c3ae.jpg">
+                <h5 class="item-name">2 Marvel Comics Grid Blue Acrylic Travel Cup</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/e0/53/87/e053877bd00e2e1046745bfd953ebc01.jpg">
+                <h5 class="item-name">Iron Man Retro Grab Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/55/56/cd/5556cdccdc09441b84d1374a85e8cac1.jpg">
+                <h5 class="item-name">Marvel Heroes Logo Jack-o-lanterns in Web Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/f7/3d/7d/f73d7d718237f5d61addd6c4827e7da4.jpg">
+                <h5 class="item-name">Marvel Hero Panel Graphics Stainless Steel Water Bottle</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/bd/a5/d1/bda5d146df5b4d164f3542f227bd8ead.jpg">
+                <h5 class="item-name">Spider-Verse|The Advance Suit Halftone Spider Water Bottle</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/42/e4/c5/42e4c55216b1245f83a76407f60d5e4f.jpg">
+                <h5 class="item-name">Thor: Love and Thunder Vintage Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/4c/bf/3f/4cbf3f05152309b3021b8d961ad1e979.jpg">
+                <h5 class="item-name">Mighty Thor Helmet Stainless Steel Water Bottle</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/736x/cb/20/96/cb2096ea6b747444a60c7d664a09ffe6.jpg">
+                <h5 class="item-name">Captain America Shield Icon Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/2a/8e/35/2a8e35b4e7290019731139ef6cf3b68f.jpg">
+                <h5 class="item-name">Venom and Carnage Split Inked Face Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+             <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/bf/38/a4/bf38a43064eec78a2609ba8b606649ad.jpg">
+                <h5 class="item-name">Avenegrs Classic Outlines in Logo Thermal Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/ea/9d/c8/ea9dc809d6c58d98468658d90f3a655c.jpg">
+                <h5 class="item-name">Black Panther Wakanda Forever|Vibranium Panther Logo Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width: 110px;" class="item-img" src="https://i.pinimg.com/564x/46/77/82/4677826e5caad1a7add02821f62eb941.jpg">
+                <h5 class="item-name">Offical Black Panther Tumbler</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/95/b7/2a/95b72a935bcd8a996edd70bd62460d62.jpg">
+                <h5 class="item-name">Tervis Spider-Man Stainless Steel Tumbler w Lid</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width:120px;" class="item-img" src="https://i.pinimg.com/564x/1b/53/1e/1b531ed1fbc3f019ee7f43ef9ffaed1a.jpg">
+                <h5 class="item-name">Tervis Iron Man Stainless Steel Tumbler w Lid</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            
+            
+            
+        </div>
+    </main>
+    
+    
+</body>
+</html>

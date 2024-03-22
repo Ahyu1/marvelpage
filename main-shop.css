@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+}
+
+
+
+.header {
+    width: 1500px;
+    display:block;
+    background-color: #000;
+    height: 80px;
+    position: fixed;
+    top: 0
+}
+
+.header-items {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 20px;
+    padding-top: 18px;
+}
+
+.neon{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 780px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 2px;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-slow{
+    transform: translate(-50%, -50%);
+    color: white /* #02c3f3;*/;
+    animation: flicker 3s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-fast{
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: flicker 1s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  @keyframes flicker {
+      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+          text-shadow: none;
+      opacity: .99;
+          
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+          opacity: 0.4;
+      }
+  }
+  
+.marvel-logo { width: 100px; margin-left: 50px; }
+
+/* =========== SIDEBAR =========== */
+.sidebar-container {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 85px;
+    height: 600px;
+    width: 300px;
+}
+
+.clothing-items, .accesory-items, .tc-items {
+    margin-left: 30px;
+    margin-top: 9px;
+
+}
+
+.clothing-items:hover, .accesory-items:hover, .tc-items:hover {
+    text-decoration: underline;
+    transform: 0.3s;
+}
+
+.all-items {
+    margin-top: 50px;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 5px 4px;
+    color:  #000
+}
+
+li:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+h4 {
+    font-family:monospace;
+    color: #000
+}
+
+/* ============ MAIN SHOP ITEMS ============ */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.item-1 {
+    display: inline-block;
+    border-radius: 12px;
+    border:#000 solid 1px;
+    margin: 0 auto;
+    width: 200px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 10px 9px;
+    box-shadow: rgba(126, 125, 125, 0.418) 5px 5px;
+}
+.item-img {
+    width: 150px;
+}
+
+.item-name, .price {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+button {
+    background-color: #fff;
+    color: rgb(201, 7, 7);
+    border: solid 1px;
+    border-color: rgb(194, 1, 1);
+    border-radius: 23px;
+    padding: 10px 10px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: red;
+    border-color: red;
+    padding: 10px 10px;
+}

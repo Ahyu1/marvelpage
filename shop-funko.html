@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Shop - Funko Pop</title>
+
+</head>
+
+<style>
+    * {
+    margin: 0;
+}
+
+main { margin-bottom: 20px;}
+
+.header {
+    width: 1500px;
+    display:block;
+    background-color: #000;
+    height: 80px;
+    position: fixed;
+    top: 0
+}
+
+.header-items {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 20px;
+    padding-top: 18px;
+}
+
+.neon{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 780px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 2px;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-slow{
+    transform: translate(-50%, -50%);
+    color: white /* #02c3f3;*/;
+    animation: flicker 3s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-fast{
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: flicker 1s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  @keyframes flicker {
+      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+          text-shadow: none;
+      opacity: .99;
+          
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+          opacity: 0.4;
+      }
+  }
+  
+.marvel-logo { width: 100px; margin-left: 50px; }
+
+/* =========== SIDEBAR =========== */
+.sidebar-container {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 85px;
+    height: 600px;
+    width: 300px;
+}
+
+.clothing-items, .accesory-items, .tc-items {
+    margin-left: 30px;
+    margin-top: 9px;
+
+}
+
+.clothing-items:hover, .accesory-items:hover, .tc-items:hover {
+    text-decoration: underline;
+    transform: 0.3s;
+}
+
+.all-items {
+    margin-top: 50px;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 5px 4px;
+    color:  #000
+}
+
+li:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+h4 {
+    font-family:monospace;
+    color: #000
+}
+
+/* ============ MAIN SHOP ITEMS ============ */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 22px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.item-1 {
+    display: inline-block;
+    border-radius: 12px;
+    border:#000 solid 1px;
+    margin: 0 auto;
+    width: 200px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 10px 9px;
+}
+.item-img {
+    width: 150px;
+}
+
+.item-name, .price {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.price { color: green}
+
+button {
+    background-color: #fff;
+    color: rgb(201, 7, 7);
+    border: solid 1px;
+    border-color: rgb(194, 1, 1);
+    border-radius: 23px;
+    padding: 10px 10px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: rgb(53, 175, 53);
+    border-color: rgb(53, 175, 53);
+    padding: 10px 10px;
+}
+</style>
+<body>
+    <main>
+        <div class="header">
+            <div class="header-items">
+                <img class="marvel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png">
+                <h1 class="neon" data-text="U">ADD ITEMS TO YOUR COLLECTION WITH <span class="flicker-slow">AMAZING </span><span class="flicker-fast">DEALS</span></h1>
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart--v1.png"/>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="all-items">
+                <h4 style=" margin-left: 30px; margin-top: 9px;">RECOMMENDED</h4>
+            </div>
+            <div class="clothing-items">
+                <h4>CLOTHING</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tshirt.html">T-shirts</a></li><br>
+                    <li>Jackets/Sweater</li><br>
+                    <li>Costumes</li>
+                </ol>
+            </div>
+            <div class="accesory-items">
+                <h4>ACCESSORIES</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-bags.html">Bags/Backpacks</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-kc.html">Keychains</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-ht.html">Hats/Thumblers</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tech.html">Tech Accessories</a></li>
+                </ol>
+            </div>
+            <div class="tc-items">
+                <h4 style="text-decoration:underline">TOYS AND COLLECTIBLES</h4>
+                <ol> 
+                    <li><a style="text-decoration: none; color:#000" href="shop-af.html">Action Figures</a></li><br>
+                    <li style="background-color: rgba(128, 128, 128, 0.39); border-radius: 5px;">Funko Pop</li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-lego.html">Lego</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/62/21/58/62215804808ffe0fa25b108a7e1c5491.jpg">
+                <h5 class="item-name">Iron-Man Funko</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/1d/89/bd/1d89bdaaebc1d4077b58f106944f2e10.jpg">
+                <h5 class="item-name">Limited Edition: Iron-Man Funko</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 13px;" class="item-img" src="https://i.pinimg.com/564x/21/08/b3/2108b34ec79e74ec6607154ff82949c2.jpg">
+                <h5 class="item-name">Ultimate Black Widow Funko Pop</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/ee/fc/a0/eefca00810bf19ab420cb00103568f98.jpg">
+                <h5 class="item-name">Spider-Man: Far From Home Funko</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/c5/19/78/c519784dedcba486e13785a9ddaa7687.jpg">
+                <h5 class="item-name">Thor:'Ragnarok' Funko figure</h5>
+                <p class="price">$26.54</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 22px;" class="item-img" src="https://i.pinimg.com/564x/1c/ff/73/1cff73cf5e0e2ac7e7b4b014f5a2fef4.jpg">
+                <h5 class="item-name">Ant-Man Funko</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 6px;" class="item-img" src="https://i.pinimg.com/564x/5a/8e/0c/5a8e0ceda331bd59edcdc877a3cdf441.jpg">
+                <h5 class="item-name">DeadPool Funko</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/b2/77/f3/b277f33b1bca4ee9655182b6f4c4227b.jpg">
+                <h5 class="item-name">Six Arm Spider-Man Funko</h5>
+                <p class="price">$24.54</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/87/6e/59/876e59bd9b2db1dfd0d748a55c1cb781.jpg">
+                <h5 class="item-name">Avengers: Endgame Tony Stark Funko</h5>
+                <p class="price">$22.54</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 19px; width: 160px;" class="item-img" src="https://i.pinimg.com/564x/24/a6/d2/24a6d2bc42dbb5c8714e0605ecd1c43e.jpg">
+                <h5 class="item-name">Captain America 464 Funko</h5>
+                <p class="price">$26.44</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 11px;" class="item-img" src="https://i.pinimg.com/564x/95/9c/be/959cbe095365f5df44e625ffb0e0d874.jpg">
+                <h5 class="item-name">Black Panther Funko</h5>
+                <p class="price">$36</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 25px;" class="item-img" src="https://i.pinimg.com/564x/f8/f4/0c/f8f40c1b86bc504337171e4b550c209c.jpg">
+                <h5 class="item-name">Hulk Funko</h5>
+                <p class="price">$30.88</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 15px;" class="item-img" src="https://i.pinimg.com/564x/dc/b0/79/dcb079fd3962001c5b4d0e6adcba833f.jpg">
+                <h5 class="item-name">Captain America 573 Funko</h5>
+                <p class="price">$35.29</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/70/a1/76/70a1763b935250606415866f317e86bd.jpg">
+                <h5 class="item-name">Spider-Man: Into the Spider-Verse Funko</h5>
+                <p class="price">$26</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/c6/74/53/c674536acaaafa71e1c8b92460b325dd.jpg">
+                <h5 class="item-name">Spider-Man: No Way Home Doctor Strange figure</h5>
+                <p class="price">$28</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/83/46/44/834644717f037a685778630575746e2c.jpg">
+                <h5 class="item-name">Spider-Man: No Way Home MJ figure</h5>
+                <p class="price">$24</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 32px;" class="item-img" src="https://i.pinimg.com/564x/b2/bc/2d/b2bc2d266e21ee1f944970f94e2705a0.jpg">
+                <h5 class="item-name">Avengers Assemble Series - Iron-Man Deluxe funko</h5>
+                <p class="price">$80.75</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/40/d6/91/40d691a134ae5ea60a9ab8ccb5d121ac.jpg">
+                <h5 class="item-name">Marvel Studios 10 CHROME POP - StarLord</h5>
+                <p class="price">$99.89</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 15px;" class="item-img" src="https://i.pinimg.com/564x/6b/78/5a/6b785a3bdd8308918c2b673272578dd7.jpg">
+                <h5 class="item-name">President Loki Funko</h5>
+                <p class="price">$26</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img class="item-img" src="https://i.pinimg.com/564x/5c/22/6c/5c226c60192cf9095bb4e0a27031ad09.jpg">
+                <h5 class="item-name">MC Venom VS Spider-Man Set 1 unit</h5>
+                <p class="price">$60.99</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 8px;" class="item-img" src="https://i.pinimg.com/564x/2f/e3/93/2fe39378d83c162b0a56f4d855257e76.jpg">
+                <h5 class="item-name">4-PACK Marvel Collections Set 1 figure</h5>
+                <p class="price">$96.86</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 7px;" class="item-img" src="https://i.pinimg.com/564x/4e/5a/94/4e5a94a9585492c82210eb9e0ce2d747.jpg">
+                <h5 class="item-name">5-Pack Captain America Collections</h5>
+                <p class="price">$112</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 23px;" class="item-img" src="https://i.pinimg.com/564x/a6/2e/84/a62e84221223a463ca1737f4be065e19.jpg">
+                <h5 class="item-name">Spider-Gwen POP Keychain</h5>
+                <p class="price">$17.14</p>
+                <button>PURCHASE</button>
+            </div>
+            
+        </div>
+    </main>
+</body>
+</html>

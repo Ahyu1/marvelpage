@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Shop - Bags/Backpacks</title>
+</head>
+<style>
+    * {
+    margin: 0;
+}
+
+main { margin-bottom: 20px;}
+
+.header {
+    width: 1500px;
+    display:block;
+    background-color: #000;
+    height: 80px;
+    position: fixed;
+    top: 0
+}
+
+.header-items {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    gap: 20px;
+    padding-top: 18px;
+}
+
+.neon{
+    width: 1000px;
+    margin-top: 20px;
+    margin-left: 780px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    letter-spacing: 2px;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-slow{
+    transform: translate(-50%, -50%);
+    color: white /* #02c3f3;*/;
+    animation: flicker 3s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  .flicker-fast{
+    transform: translate(-50%, -50%);
+    color: white;
+    animation: flicker 1s linear infinite;
+    /*text-shadow: 1px 0px 4px #0088f8, 2px 0px 4px #0097fc, 3px 0px 4px #0084ff, 2px 0px 3px #001aff, 2px 3px 15px #1900ff, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #0004f3,40px 0vw 200px #2600ff;*/
+  }
+  
+  @keyframes flicker {
+      0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+          text-shadow: none;
+      opacity: .99;
+          
+      }
+      20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+          opacity: 0.4;
+      }
+  }
+  
+.marvel-logo { width: 100px; margin-left: 50px; }
+
+/* =========== SIDEBAR =========== */
+.sidebar-container {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 85px;
+    height: 600px;
+    width: 300px;
+}
+
+.clothing-items, .accesory-items, .tc-items {
+    margin-left: 30px;
+    margin-top: 9px;
+
+}
+
+.clothing-items:hover, .accesory-items:hover, .tc-items:hover {
+    text-decoration: underline;
+    transform: 0.3s;
+}
+
+.all-items {
+    margin-top: 50px;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    padding: 5px 4px;
+    color:  #000
+}
+
+li:hover {
+    background-color: rgba(128, 128, 128, 0.39);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+h4 {
+    font-family:monospace;
+    color: #000
+}
+
+/* ============ MAIN SHOP ITEMS ============ */
+.shop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 22px;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.item-1 {
+    display: inline-block;
+    border-radius: 12px;
+    border:#000 solid 1px;
+    margin: 0 auto;
+    width: 200px;
+    text-align:center;
+    vertical-align: middle;
+    padding: 10px 9px;
+}
+.item-img {
+    width: 150px;
+}
+
+.item-name, .price {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.price { color: green}
+
+button {
+    background-color: #fff;
+    color: rgb(201, 7, 7);
+    border: solid 1px;
+    border-color: rgb(194, 1, 1);
+    border-radius: 23px;
+    padding: 10px 10px;
+}
+
+button:hover {
+    color: #fff;
+    background-color: rgb(53, 175, 53);
+    border-color: rgb(53, 175, 53);
+    padding: 10px 10px;
+}
+</style>
+<body>
+    <main>
+        <div class="header">
+            <div class="header-items">
+                <img class="marvel-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png">
+                <h1 class="neon" data-text="U">ADD ITEMS TO YOUR COLLECTION WITH <span class="flicker-slow">AMAZING </span><span class="flicker-fast">DEALS</span></h1>
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart--v1.png"/>
+            </div>
+        </div>
+        <div class="sidebar-container">
+            <div class="all-items">
+                <h4 style=" margin-left: 30px; margin-top: 9px;">RECOMMENDED</h4>
+            </div>
+            <div class="clothing-items">
+                <h4>CLOTHING</h4>
+                <ol>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tshirt.html">T-shirts</a></li><br>
+                    <li>Jackets/Sweater</li><br>
+                    <li>Footwear</li>
+                </ol>
+            </div>
+            <div class="accesory-items">
+                <h4>ACCESSORIES</h4>
+                <ol>
+                    <li style="background-color: rgba(128, 128, 128, 0.39); border-radius: 5px;">Bags/Backpacks</li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-kc.html">Keychains</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-ht.html">Hats/Thumblers</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-tech.html">Tech Accessories</a></li>
+                </ol>
+            </div>
+            <div class="tc-items">
+                <h4 style="text-decoration:underline">TOYS AND COLLECTIBLES</h4>
+                <ol> 
+                    <li><a style="text-decoration: none; color:#000" href="shop-af.html">Action Figures</a></li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-funko.html"></a>Funko Pop</li><br>
+                    <li><a style="text-decoration: none; color:#000" href="shop-lego.html">Lego</a></li>
+                </ol>
+            </div>
+        </div>
+        <div class="shop-grid">
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/03/93/87/039387400c0ce4556c34e8bb9c701893.jpg">
+                <h5 class="item-name">Captain America Denim Shoulder Bag</h5>
+                <p class="price">$26.35</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; " class="item-img" src="https://i.pinimg.com/564x/f8/6d/73/f86d73adf6914556623a07d94271b6bc.jpg">
+                <h5 class="item-name">Loki Mini Backpack Leather </h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width:130px" class="item-img" src="https://i.pinimg.com/564x/c5/7d/90/c57d901001ad607e4ea981a98727a4b8.jpg">
+                <h5 class="item-name">Hela Thor Ragnarok Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width:100px;" class="item-img" src="https://i.pinimg.com/564x/d8/a5/1c/d8a51c50ca4a7ac6c5729125c95d9bde.jpg">
+                <h5 class="item-name">Deadpool Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/ee/a9/70/eea970813bf85a29f99b37eecaa0eaa4.jpg">
+                <h5 class="item-name">Marvel Loungefly Leather Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/3d/0d/14/3d0d143310bd2f714cdc00bae5c69258.jpg">
+                <h5 class="item-name">Iron Man Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/4f/98/76/4f98762db87665b53ef08dd3bf1aa665.jpg">
+                <h5 class="item-name">Loungefly Infinity Saga Small Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/8b/ad/9e/8bad9e5ebbdaf82cfa560e04796a0dfa.jpg">
+                <h5 class="item-name">Loungefly Iron Man Infinity Saga Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/eb/6e/03/eb6e03c75b48d41610bdd70e042696d3.jpg">
+                <h5 class="item-name">Captain Marvel Shouler Bag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/b1/68/90/b16890243ff98b6e2f334cc99e418100.jpg">
+                <h5 class="item-name">Captain America Hard Plastic Shield Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/19/77/18/197718a6e2aaab7702c944d95acac631.jpg">
+                <h5 class="item-name">Loungefly Marvel Winter Soldier Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/25/1b/85/251b85d31f240dd85006bc8195360882.jpg">
+                <h5 class="item-name">Doctor Strange Mini Backpack Multivrerse of Madness</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width: 110px" class="item-img" src="https://i.pinimg.com/564x/7f/23/90/7f2390110f24c8d80bd073b396b6523e.jpg">
+                <h5 class="item-name">Black Panther Mini Backpack - Black Purple</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width: 110px;" class="item-img" src="https://i.pinimg.com/564x/e5/4f/b6/e54fb6aa214731926affb352abaa7236.jpg">
+                <h5 class="item-name">Marvel Funko Comics Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/da/6c/9c/da6c9c7760b145c5b6a4a87b1c5263ad.jpg">
+                <h5 class="item-name">Black Panther Wakanda Forever Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 15px; width: 160px;" class="item-img" src="https://i.pinimg.com/564x/ac/6f/b7/ac6fb7ed1715ac03a9899982daaa9c50.jpg">
+                <h5 class="item-name">Marvel Universe Bag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/c0/c7/47/c0c7477e9638bc51e473c2bcec9e1ec2.jpg">
+                <h5 class="item-name">Avengers Debossed Icon Mini Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/2c/69/7b/2c697b0e5f83c37337c395b742f942b1.jpg">
+                <h5 class="item-name">Captain America Denim Casual Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/b5/d8/64/b5d86435d4e654d4dd65c9b9816b7644.jpg">
+                <h5 class="item-name">Black Panther Mask Symbol Emblem Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/90/95/83/90958356b37885a6f962b1009f6c6b63.jpg">
+                <h5 class="item-name">Marvel Moon Knight Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/33/e0/d7/33e0d7abd13456fe8d976cd9064b049c.jpg">
+                <h5 class="item-name">Venom Backpack</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/a4/00/99/a400999c73735fe9f98b87d015d77087.jpg">
+                <h5 class="item-name">Hulk Backpack for Kids</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/5a/7f/56/5a7f5676f93b4a0c5a11dd8d57954b3c.jpg">
+                <h5 class="item-name">"Hey Y'all Loki Tote Bag"</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; margin-left: 7px;" class="item-img" src="https://i.pinimg.com/564x/ab/e7/b9/abe7b9a16e14c27b3f770f75f7ed8589.jpg">
+                <h5 class="item-name">Spider-Man Round Backpack for Kids</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/ad/2b/21/ad2b214a7d273a858dab3eb3c56d0eb6.jpg">
+                <h5 class="item-name">Spider-Gwen Shoulder Bag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/81/50/2f/81502f31b7c01b954a46d6a6f653f126.jpg">
+                <h5 class="item-name">Captain Marvel Shoulder Bag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/fc/a4/20/fca42051ae39345ca4c8608120d847ef.jpg">
+                <h5 class="item-name">Iron Man Handbag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="https://i.pinimg.com/564x/17/c4/d1/17c4d1dd19c1d957c780d5bff3bd58c5.jpg">
+                <h5 class="item-name">Deadpool Schoolbag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 20px;" class="item-img" src="https://i.pinimg.com/564x/fe/93/b7/fe93b70296d1e6c7026839e30f0f6e59.jpg">
+                <h5 class="item-name">Loungefly Marvel Captain America Shoulder Bag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px; width:110px" class="item-img" src="https://i.pinimg.com/564x/cc/b7/42/ccb7428d2e309bb421848703e6ff1da0.jpg">
+                <h5 class="item-name">All Marvel Comics Messenger Bag</h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="">
+                <h5 class="item-name"></h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+            <div class="item-1">
+                <img style="margin-top: 10px;" class="item-img" src="">
+                <h5 class="item-name"></h5>
+                <p class="price">$30.78</p>
+                <button>PURCHASE</button>
+            </div>
+
+            
+
+        </div>
+    </main>
+    
+</body>
+</html>
